@@ -1,5 +1,3 @@
-# Hostella-App
+lHostela-App
 Sensity..
-Dev. Team
-Hello World
 Welcome to the Hostalla App
