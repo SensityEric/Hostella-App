@@ -15,30 +15,33 @@ function CusSearchField({ icon, ...otherProps }) {
           style={styles.icon}
         />
       )}
-      <TextInput style={[defaultStyles.text,styles.textField]} {...otherProps} />
+      <TextInput
+        style={[defaultStyles.text, styles.textField]}
+        {...otherProps}
+      />
     </View>
   );
 }
 
 const styles = StyleSheet.create({
   container: {
-    borderColor:defaultStyles.colors.white,
-    backgroundColor:defaultStyles.colors.white,
-    borderWidth:1,
+    borderColor: defaultStyles.colors.white,
+    backgroundColor: defaultStyles.colors.white,
+    borderWidth: 1,
     borderRadius: 15,
     flexDirection: "row",
-    width:"100%",
+    width: "100%",
     padding: 15,
     marginVertical: 10,
-    alignItems:"center",
+    alignItems: "center",
   },
   icon: {
     marginRight: 10,
   },
-  textField:{
-    flex:1,
-    color:defaultStyles.colors.Gray_color
-  }
+  textField: {
+    flex: 1,
+    color: defaultStyles.colors.Gray_color,
+  },
 });
 
 export default CusSearchField;

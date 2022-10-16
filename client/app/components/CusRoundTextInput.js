@@ -15,33 +15,37 @@ function CusRoundTextInput({ icon, ...otherProps }) {
           style={styles.icon}
         />
       )}
-      <TextInput style={[defaultStyles.text,styles.inputText]} {...otherProps} clearButtonMode />
+      <TextInput
+        style={[defaultStyles.text, styles.inputText]}
+        {...otherProps}
+        clearButtonMode
+      />
     </View>
   );
 }
 
 const styles = StyleSheet.create({
   container: {
-    borderColor:defaultStyles.colors.Gray_color,
-    borderWidth:1,
+    borderColor: defaultStyles.colors.Gray_color,
+    borderWidth: 1,
     borderRadius: 30,
     flexDirection: "row",
-    width:"100%",
+    width: "100%",
     padding: 15,
     marginVertical: 10,
-    alignItems:"center",
-    justifyContent:"center",
-    backgroundColor:defaultStyles.colors.white,
+    // alignItems:"center",
+    // justifyContent:"center",
+    backgroundColor: defaultStyles.colors.white,
   },
   icon: {
     marginRight: 10,
-    color:defaultStyles.colors.Gray_color,
+    color: defaultStyles.colors.Gray_color,
     // position:"absolute",
   },
-  inputText:{
-    flex:1,
-    fontSize:18,
-  }
+  inputText: {
+    flex: 1,
+    fontSize: 18,
+  },
 });
 
 export default CusRoundTextInput;

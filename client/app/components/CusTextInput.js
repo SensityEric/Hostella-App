@@ -1,43 +1,37 @@
 import React from "react";
-import { View, TextInput, StyleSheet } from "react-native";
-import { MaterialCommunityIcons } from "@expo/vector-icons";
+import { View, TextInput, StyleSheet,Text } from "react-native";
 
 import defaultStyles from "../config/Styles";
 
-function CusTextInput({ icon, ...otherProps }) {
+function CusTextInput({ title, ...otherProps }) {
   return (
     <View style={styles.container}>
-      {icon && (
-        <MaterialCommunityIcons
-          name={icon}
-          size={20}
-          color={defaultStyles.colors.medium}
-          style={styles.icon}
-        />
-      )}
-      <TextInput style={[defaultStyles.text,styles.textField]} {...otherProps} />
+      {title && <Text style={[defaultStyles.text]}>{title}</Text>}
+      <TextInput
+        style={[defaultStyles.text, styles.textField]}
+        {...otherProps}
+      />
     </View>
   );
 }
 
 const styles = StyleSheet.create({
   container: {
-    borderColor:defaultStyles.colors.Gray_color,
-    borderWidth:1,
+    borderColor: defaultStyles.colors.Gray_color,
+    borderWidth: 1,
     borderRadius: 10,
     flexDirection: "row",
-    width:"100%",
+    width: "100%",
     padding: 15,
     marginVertical: 10,
-    alignItems:"center",
+    alignItems: "center",
   },
   icon: {
     marginRight: 10,
   },
-  textField:{
-    flex:1
-  }
-  
+  textField: {
+    flex: 1,
+  },
 });
 
 export default CusTextInput;

@@ -1,18 +1,18 @@
 import React from "react";
-import { View, StyleSheet, Text,Image ,TouchableOpacity} from "react-native";
+import {  StyleSheet, Text, Image, TouchableOpacity } from "react-native";
 
 import defaultStyles from "../config/Styles";
 
-function CusButton({ logo,children, ...otherProps }) {
+function CusButton({ style,logo,onPress, children,otherProps}) {
   return (
-    <TouchableOpacity style={styles.container}>
-      {logo && (
-        <Image
-          source={logo}
-          style={styles.logo}
-        />
-      )}
-      <Text style={[defaultStyles.text,styles.buttonText]} {...otherProps}>{children}</Text>
+    <TouchableOpacity
+      style={[styles.container,style]}
+      onPress={onPress}
+    >
+      {logo && <Image source={logo} style={styles.logo} />}
+      <Text style={[defaultStyles.text, styles.buttonText,style]} {...otherProps}>
+        {children}
+      </Text>
     </TouchableOpacity>
   );
 }
@@ -29,17 +29,15 @@ const styles = StyleSheet.create({
     shadowColor: "#000",
   },
   logo: {
-    marginRight: 10,
-    height:20,
-    width:20,
+    height: 30,
+    width: 30,
   },
-  buttonText:{
-    color:defaultStyles.colors.white,
-    flex:1,
-    textAlign:"center",
-    fontSize:18,
-    left:-15
-  }
+  buttonText: {
+    color: defaultStyles.colors.white,
+    flex: 1,
+    textAlign: "center",
+    fontSize: 18,
+  },
 });
 
 export default CusButton;
