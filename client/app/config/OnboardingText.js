@@ -7,13 +7,13 @@ export default [
   },
   {
     id: 2,
-    Heading: "the perfect hostel without ease",
+    Heading: "Quick, Easy & Secure Payment",
     SubHeading:
-      "We provide dont have a platform that finds the hostel of your choice",
+      "Our payment security factors makes your payment quick, easy and secure",
   },
   {
     id: 3,
-    Heading: "I'm out of words",
-    SubHeading: "Peace is never an option",
+    Heading: "Chat directly with the hostel vendors",
+    SubHeading: "Chat function enables secure communication with hostel vendors",
   },
 ];

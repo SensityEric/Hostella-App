@@ -14,26 +14,9 @@ import OnboardingItem from "../components/OnboardingItem";
 import defaultStyles from "../config/Styles";
 import Swiper from "../components/Swiper";
 
+import slides from "../config/OnboardingText";
+
 export default function OnboardingScreen({navigation}) {
-  const slides = [
-    {
-      key: 1,
-      Heading: "Let's find the perfect hostel with ease",
-      SubHeading:
-        "We provide a platform that can help you find the hostel of your choice",
-    },
-    {
-      key: 2,
-      Heading: "the perfect hostel without ease",
-      SubHeading:
-        "We provide dont have a platform that finds the hostel of your choice",
-    },
-    {
-      key: 3,
-      Heading: "I'm out of words",
-      SubHeading: "Peace is never an option",
-    },
-  ];
   const widthDevice = useWindowDimensions().width;
   
   return (
@@ -55,7 +38,6 @@ const styles = StyleSheet.create({
   container: {
     flex: 1,
     justifyContent: "flex-end",
-    // alignItems: "center",
     top: -40,
   },
   board: {

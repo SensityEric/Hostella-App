@@ -7,6 +7,6 @@ export default {
   text: {
     color: colors.black,
     fontSize: 16,
-    // fontFamily: 'Poppin',
+    // fontFamily: "Poppins-Regular",
   },
 };

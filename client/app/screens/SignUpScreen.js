@@ -1,10 +1,115 @@
-import React from 'react'
-import { Text, View } from 'react-native'
+import React from "react";
+import { Image, View, Text } from "react-native";
 
-export default function SignUpScreen() {
+import CusButton from "../components/CusButton";
+import CusText from "../components/CusText";
+import CusTextInput from "../components/CusTextInput";
+import Screen from "../components/Screen";
+import defaultStyles from "../config/Styles";
+
+export default function SignInScreen({ navigation }) {
   return (
+    <Screen
+      style={{
+        paddingTop: 30,
+        paddingHorizontal: 10,
+        justifyContent: "space-between",
+        backgroundColor: defaultStyles.colors.white,
+      }}
+    >
+      <Image
+        resizeMode="contain"
+        style={{ height: 30, width: "30%", margnLeft: 10 }}
+        source={require("../assets/images/logo.png")}
+      />
+      <CusText style={{ fontSize: 24, fontWeight: "450", marginTop: 10 }}>
+        Sign up to Hostella
+      </CusText>
+      <CusText
+        style={{
+          fontSize: 14,
+          color: defaultStyles.colors.Gray_color_dark,
+          marginVertical: 6,
+        }}
+      >
+        Please fill in the fields below to continue
+      </CusText>
       <View>
-          <Text>hello from signup screen</Text>
-    </View>
-  )
+        <CusTextInput title="Full Name" />
+        <CusTextInput title="Email" />
+        <CusTextInput title="Password" />
+        <CusTextInput title="Confirm Password" />
+      </View>
+
+      <CusButton>Sign Up</CusButton>
+      <View
+        style={{
+          flexDirection: "row",
+          alignItems: "center",
+        }}
+      >
+        <View
+          style={{
+            flex: 1,
+            height: 1,
+            backgroundColor: defaultStyles.colors.Gray_color_light,
+          }}
+        />
+        <View>
+          <CusText
+            style={{
+              textAlign: "center",
+              fontSize: 14,
+              color: defaultStyles.colors.Gray_color_dark,
+              fontWeight: "450",
+            }}
+          >
+            Or
+          </CusText>
+        </View>
+        <View
+          style={{
+            flex: 1,
+            height: 1,
+            backgroundColor: defaultStyles.colors.Gray_color_light,
+          }}
+        />
+      </View>
+      <CusButton
+        logo={require("../assets/images/google-logo.png")}
+        style={{
+          backgroundColor: defaultStyles.colors.Gray_color_light,
+        }}
+        textStyles={{ color: defaultStyles.colors.black }}
+      >
+        Sign In with google
+      </CusButton>
+      <CusButton
+        logo={require("../assets/images/facebook-icon.png")}
+        style={{
+          backgroundColor: defaultStyles.colors.Gray_color_light,
+          color: defaultStyles.colors.black,
+        }}
+        textStyles={{ color: defaultStyles.colors.black }}
+      >
+        Sign In with facebook
+      </CusButton>
+      <View
+        style={{
+          flexDirection: "row",
+          alignItems: "center",
+          justifyContent: "center",
+          marginTop: 20,
+        }}
+      >
+        <CusText>Already have an account?</CusText>
+        <Text
+          style={{ color: defaultStyles.colors.primary, marginLeft: 3 }}
+          onPress={() => navigation.navigate("signin")}
+        >
+          Sign In
+        </Text>
+      </View>
+    </Screen>
+  );
 }

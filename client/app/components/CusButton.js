@@ -3,14 +3,14 @@ import {  StyleSheet, Text, Image, TouchableOpacity } from "react-native";
 
 import defaultStyles from "../config/Styles";
 
-function CusButton({ style,logo,onPress, children,otherProps}) {
+function CusButton({ style,logo,onPress, children,otherProps,textStyles}) {
   return (
     <TouchableOpacity
       style={[styles.container,style]}
       onPress={onPress}
     >
       {logo && <Image source={logo} style={styles.logo} />}
-      <Text style={[defaultStyles.text, styles.buttonText,style]} {...otherProps}>
+      <Text style={[defaultStyles.text, styles.buttonText,textStyles]} {...otherProps}>
         {children}
       </Text>
     </TouchableOpacity>

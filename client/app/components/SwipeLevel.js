@@ -5,17 +5,24 @@ import CusText from "./CusText"
 export default function SwipeLevel({ item,style }) {
   return (
     <View style={[styles.container,style]}>
-          <CusText>{item.Heading}</CusText>
-          <CusText>{item.SubHeading}</CusText>
+          <CusText style={styles.heading}>{item.Heading}</CusText>
+          <CusText style={styles.subHeading}>{item.SubHeading}</CusText>
     </View>
   );
 }
 
 const styles = StyleSheet.create({
-    container: {
-        // width: 360,
-        // overflow: "hidden",
-        // backgroundColor: "green",
-        textAlign: "center",
+  container: {
+      top: -30,
+    },
+    heading: {
+      fontSize: 24,
+      width:"90%" ,
+      textAlign: "center",
+      paddingBottom:5
+    },
+    subHeading: {
+      textAlign: "center",
+      width:"90%" ,
   },
 });
