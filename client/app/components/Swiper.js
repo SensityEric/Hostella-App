@@ -8,21 +8,25 @@ import defaultStyles from "../config/Styles";
 
 const App = ({ item }) => (
   console.log(item),
-  <View style={styles.container}>
-    <SwiperFlatList
-      autoplay
-      autoplayDelay={3}
-      autoplayLoop
-      index={item.length-1}
-      showPagination
+  (
+    <View style={styles.container}>
+      <SwiperFlatList
+        autoplay
+        autoplayDelay={3}
+        autoplayLoop
+        paginationDefaultColor={defaultStyles.colors.Gray_color_medium}
+        paginationActiveColor={defaultStyles.colors.primary}
+        pagingEnabled
+        index={item.length - 1}
+        showPagination
         data={item}
-        indicatorStyle={defaultStyles.colors.primary}
-        keyExtractor={item => item.id}
-        renderItem={({item}) => (
+        keyExtractor={(item) => item.id}
+        renderItem={({ item }) => (
           <SwipeLevel style={styles.child} item={item} />
-      )}
-    />
-  </View>
+        )}
+      />
+    </View>
+  )
 );
 
 const { width } = Dimensions.get("window");

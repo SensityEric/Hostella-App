@@ -22,14 +22,15 @@ export default function SignInScreen({ navigation }) {
         style={{ height: 30, width: "30%", margnLeft: 10 }}
         source={require("../assets/images/logo.png")}
       />
-      <CusText style={{ fontSize: 24, fontWeight: "450", marginTop: 10 }}>
+      <CusText style={{ fontSize: 24, fontFamily: "medium", marginTop: 10 }}>
         Sign up to Hostella
       </CusText>
       <CusText
         style={{
           fontSize: 14,
           color: defaultStyles.colors.Gray_color_dark,
-          marginVertical: 6,
+          marginTop: 5,
+          marginBottom: 25,
         }}
       >
         Please fill in the fields below to continue
@@ -37,8 +38,8 @@ export default function SignInScreen({ navigation }) {
       <View>
         <CusTextInput title="Full Name" />
         <CusTextInput title="Email" />
-        <CusTextInput title="Password" />
-        <CusTextInput title="Confirm Password" />
+        <CusTextInput title="Password" secureTextEntry />
+        <CusTextInput title="Confirm Password" secureTextEntry />
       </View>
 
       <CusButton>Sign Up</CusButton>
@@ -46,6 +47,7 @@ export default function SignInScreen({ navigation }) {
         style={{
           flexDirection: "row",
           alignItems: "center",
+          justifyContent: "space-between",
         }}
       >
         <View
@@ -61,7 +63,7 @@ export default function SignInScreen({ navigation }) {
               textAlign: "center",
               fontSize: 14,
               color: defaultStyles.colors.Gray_color_dark,
-              fontWeight: "450",
+              fontFamily: "regular",
             }}
           >
             Or
@@ -103,12 +105,16 @@ export default function SignInScreen({ navigation }) {
         }}
       >
         <CusText>Already have an account?</CusText>
-        <Text
-          style={{ color: defaultStyles.colors.primary, marginLeft: 3 }}
+        <CusText
+          style={{
+            color: defaultStyles.colors.primary,
+            marginLeft: 3,
+            fontSize: 14,
+          }}
           onPress={() => navigation.navigate("signin")}
         >
           Sign In
-        </Text>
+        </CusText>
       </View>
     </Screen>
   );

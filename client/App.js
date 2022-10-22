@@ -13,10 +13,10 @@ const Stack = createNativeStackNavigator();
 
 const fetchFonts = () => {
   return Font.loadAsync({
-    "font-regular": require("./app/assets/fonts/Poppins-Regular.ttf"),
-    "font-bold": require("./app/assets/fonts/Poppins-Bold.ttf"),
-    "font-semibold": require("./app/assets/fonts/Poppins-SemiBold.ttf"),
-    "font-medium": require("./app/assets/fonts/Poppins-Medium.ttf"),
+    "regular": require("./app/assets/fonts/Poppins-Regular.ttf"),
+    "bold": require("./app/assets/fonts/Poppins-Bold.ttf"),
+    "semibold": require("./app/assets/fonts/Poppins-SemiBold.ttf"),
+    "medium": require("./app/assets/fonts/Poppins-Medium.ttf"),
   });
 };
 
@@ -35,7 +35,7 @@ export default function App() {
       <NavigationContainer>
         <Stack.Navigator
           screenOptions={{ headerShown: false }}
-          // initialRouteName=""
+          // initialRouteName="test"
         >
           <Stack.Screen name="onboarding" component={OnboardingScreen} />
           <Stack.Screen name="signup" component={SignUpScreen} />

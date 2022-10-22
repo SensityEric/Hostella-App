@@ -31,14 +31,15 @@ export default function SignInScreen({navigation}) {
         style={{
           fontSize: 14,
           color: defaultStyles.colors.Gray_color_dark,
-          marginVertical: 6,
+          marginTop: 5,
+          marginBottom:25
         }}
       >
         Hello there, Happy to see you once again
       </CusText>
       <View>
         <CusTextInput title="Email" />
-        <CusTextInput title="Password" />
+        <CusTextInput title="Password" secureTextEntry />
       </View>
       <CusText
         style={{
@@ -51,14 +52,41 @@ export default function SignInScreen({navigation}) {
       </CusText>
 
       <CusButton>Sign In</CusButton>
-      <View style={{ flexDirection: "row", alignItems: "center" ,marginVertical:20}}>
-        <View style={{ flex: 1, height: 1, backgroundColor: defaultStyles.colors.Gray_color_light }} />
+      <View
+        style={{
+          flexDirection: "row",
+          alignItems: "center",
+          justifyContent:"space-between",
+          marginVertical: 20,
+        }}
+      >
+        <View
+          style={{
+            flex: 1,
+            height: 1,
+            backgroundColor: defaultStyles.colors.Gray_color_light,
+          }}
+        />
         <View>
-          <CusText style={{ width: 50, textAlign: "center", fontSize: 14, color:defaultStyles.colors.Gray_color_dark,fontWeight:"450"}}>
+          <CusText
+            style={{
+              width: 50,
+              textAlign: "center",
+              fontSize: 14,
+              color: defaultStyles.colors.Gray_color_dark,
+              fontWeight: "450",
+            }}
+          >
             Or
           </CusText>
         </View>
-        <View style={{ flex: 1, height: 1, backgroundColor: defaultStyles.colors.Gray_color_light }} />
+        <View
+          style={{
+            flex: 1,
+            height: 1,
+            backgroundColor: defaultStyles.colors.Gray_color_light,
+          }}
+        />
       </View>
       <CusButton
         logo={require("../assets/images/google-logo.png")}
@@ -88,9 +116,16 @@ export default function SignInScreen({navigation}) {
         }}
       >
         <CusText>Dont have an account?</CusText>
-        <Text style={{ color: defaultStyles.colors.primary, marginLeft: 3 }} onPress={()=>navigation.navigate("signup")}>
-          Sign Up
-        </Text>
+        <CusText
+          style={{
+            color: defaultStyles.colors.primary,
+            marginLeft: 3,
+            fontSize: 14,
+          }}
+          onPress={() => navigation.navigate("signup")}
+        >
+          Sign up
+        </CusText>
       </View>
     </Screen>
   );

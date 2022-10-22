@@ -13,16 +13,18 @@ export default function SwipeLevel({ item,style }) {
 
 const styles = StyleSheet.create({
   container: {
-      top: -30,
+      top: -20,
     },
     heading: {
       fontSize: 24,
       width:"90%" ,
       textAlign: "center",
-      paddingBottom:5
+      paddingBottom: 5,
+      fontFamily:'semibold'
     },
     subHeading: {
       textAlign: "center",
-      width:"90%" ,
+      width: "90%",
+      fontFamily:"regular"
   },
 });

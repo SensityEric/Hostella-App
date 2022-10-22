@@ -3,7 +3,7 @@ import { View, TextInput, StyleSheet, Text,Animated } from "react-native";
 
 import defaultStyles from "../config/Styles";
 
-function CusTextInput({ title, ...otherProps }) {
+function CusTextInput({ title,secureTextEntry, ...otherProps }) {
   const [input, setInput] = useState("");
   const [isOccupied, setIsOccupied] = useState(0);
   const [isFocused, setIsFocused] = useState(false);
@@ -33,6 +33,7 @@ function CusTextInput({ title, ...otherProps }) {
       <TextInput
         style={[defaultStyles.text, styles.textField]}
         {...otherProps}
+        secureTextEntry={secureTextEntry}
         onFocus={handleFocus}
         onBlur={handleBlur}
         blurOnSubmit
